@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    vertical-align: baseline;
+  }
+  
+  /* Evitamos problemas con las imagenes */
+  img,
+  picture,
+  video,
+  iframe,
+  figure {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+  }
+  
+  /* Reseteamos los enlaces para funcionar como cajas... */
+  a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+  }
+  
+  /* ... excepto los que se encuentran en pÃ¡rrafos */
+  p a {
+    display: inline;
+  }
+  
+  /* Quitamos los puntos de los <li> */
+  li {
+    list-style-type: none;
+  }
+  
+  /* Configuramos anclas suaves */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Desactivamos estilos por defecto de las principales etiquetas de texto */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  a,
+  strong,
+  blockquote,
+  i,
+  b,
+  u,
+  em {
+    font-size: 1em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Evitamos problemas con los pseudoelementos de quotes */
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: "";
+    content: none;
+  }
+  
+  /* Configuramos el texto que seleccionamos */
+  ::-moz-selection {
+    background-color: var(--negro);
+    color: var(--blanco);
+  }
+  
+  ::selection {
+    background-color: var(--negro);
+    color: var(--blanco);
+  }
+  
+  /* Nivelamos problemas de tipografÃ­as y colocaciÃ³n de formularios */
+  form,
+  input,
+  textarea,
+  select,
+  button,
+  label {
+    font-family: inherit;
+    font-size: inherit;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    background-color: transparent;
+    color: inherit;
+    display: block;
+    /* opcional */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  /* Reseteamos las tablas */
+  table,
+  tr,
+  td {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  /* Evitamos problemas con los SVG */
+  svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+  }
+  
+  /* Configuramos la tipografÃ­a para toda la web */
+  body {
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+    color: var(--negro);
+    /* opcional */
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    /* opcional */
+    font-smooth: always;
+    /* opcional */
+    -webkit-font-smoothing: antialiased;
+    /* opcional */
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+.header__search {
+    background-color: rgb(161, 195, 152);
+    padding: .625rem 1.25rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.03125rem solid rgb(254, 253, 237);
+}
+
+.header__logo {
+    font-size: 1.5rem;
+    color: rgb(254, 253, 237);
+}
+
+.search {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    border: .0625rem solid rgb(161, 195, 152);
+}
+
+.search__input {
+    padding: .3125rem;
+    width: 12.5rem;
+    border: none;
+    background: none;
+    outline: none;
+    color: black;
+}
+
+.search__input::placeholder {
+    color: #aaa;
+    transition: color 0.3s ease;
+}
+
+
+.search__button {
+    padding: .3125rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: black;
+}
+
+.search__svg{
+    color: black;
+}
+
+.profile {
+    width: 10%;
+    position: relative;
+}
+.profile__button{
+    width: 100%;
+    background-color: rgb(254, 253, 237);
+    border: .0313rem solid rgb(250, 112, 112);
+    color: rgb(250, 112, 112);
+}
+
+.profile__button:hover{
+  background-color: rgb(250, 112, 112);
+  color: rgb(254, 253, 237);
+}
+
+.profile__dropdown {
+    display: block;
+    position: absolute;
+    background-color: rgb(254, 253, 237);
+    min-width: 10rem;
+    padding: .625rem;
+    z-index: 1;
+    top: 2.1875rem;
+    right: 0;
+    border: .0313rem solid rgb(250, 112, 112) ;
+}
+
+.profile__a {
+    color: rgb(250, 112, 112);
+    text-decoration: none;
+    display: block;
+    padding: .3125rem;
+    border: .0313rem solid rgb(250, 112, 112);
+}
+
+.profile__a:hover {
+    background-color: rgb(250, 112, 112);
+    color: rgb(254, 253, 237) ;
+}
+
+.nav{
+  background-color: rgb(161, 195, 152);
+    width: 100%;
+    min-height: 2.5rem;
+    border-bottom: .0313rem solid rgb(254, 253, 237);
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__ul{
+    width: 30%;
+    margin: auto;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.nav__li{
+    width: 100%;
+}
+
+.nav__a{
+    color: rgb(254, 253, 237);
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.nav__a:hover{
+  color: rgb(250, 112, 112);
+}
+
