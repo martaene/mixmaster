@@ -158,25 +158,25 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  gap: 19px;
+  gap: 1.1875rem;
 }
 .welcome__h2{
   color: rgb(250, 112, 112);
-  font-size: 50px;
+  font-size: 3.125rem;
 }
 .welcome__p{
   width: 75%;
   color: rgb(250, 112, 112);
-  font-size: 25px;
+  font-size: 1.5625rem;
   text-align: center;
 }
 .welcome__a{
-  padding: 23px 35px;
+  padding: 1.4375rem 2.1875rem;
   background-color: rgb(254, 253, 237);
   display: inline;
-  border-radius: 50px;
+  border-radius: 3.125rem;
   color: rgb(250, 112, 112);
-  border: 1px solid rgb(250, 112, 112);
+  border: .0625rem solid rgb(250, 112, 112);
 }
 .welcome__a:hover{
   background-color: rgb(250, 112, 112);

@@ -162,7 +162,7 @@
 
 .cocktail__details {
   width: 100%;
-    padding: 10px;
+    padding: .625rem;
     background-color: rgb(198, 235, 197);
     display: inline;
 
@@ -173,24 +173,24 @@
 
 .cocktail__h3 {
     margin-top: 0;
-    font-size: 28px;
+    font-size: 1.75rem;
     color: rgb(250, 112, 112);
 }
 .cocktail__h3:hover{
   color: rgb(254, 253, 237);
 }
 .cocktail__ul{
-  margin-top: 15px;
+  margin-top: .9375rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  gap: 10px;
+  gap: .625rem;
 }
 .cocktail__li{
   background-color: rgb(161, 195, 152);
-  padding: 3px 6px;
-  border-radius: 10px;
-  font-size: 13px;
+  padding: .1875rem .375rem;
+  border-radius: .625rem;
+  font-size: .8125rem;
   color:  rgb(254, 253, 237);
 }
 
