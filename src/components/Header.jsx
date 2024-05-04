@@ -30,13 +30,17 @@ const Profile = () => {
     const [showMenu, setShowMenu] = useState(false)
 
 
-    //Función para mostrar un menu desplegable
+    {//Función para mostrar un menu desplegable
+
+    }
     const toggleMenu = () => {
         setShowMenu(!showMenu)
         console.log(showMenu)
     };
 
-    //Función para ocultar un menu desplegable
+    {//Función para ocultar un menu desplegable
+        
+    }
     const handleLogout = () => {
         localStorage.removeItem('login')
         navigate('/')

@@ -10,19 +10,27 @@ export function Edit() {
    
    const navigate = useNavigate()
 
-    //Comprueba que las credenciales esten guardadas en localStorage
+
+
+    {//Comprueba que las credenciales esten guardadas en localStorage
+
+    }
    useEffect(() => {
       const buscar = localStorage.getItem('login')
       console.log(buscar)
 
-      // Si no estan guardadas redirige a Login
+      {// Si no estan guardadas redirige a Login
+
+      }
       if (!buscar) {
          navigate('/')
       }
    }, [navigate])
 
 
-//LLamada a la API para mostrar el cocktail con ese id
+{//LLamada a la API para mostrar el cocktail con ese id
+
+}
    useEffect(() => {
       const getCocktail = async () => {
          try {
@@ -40,7 +48,9 @@ export function Edit() {
    }, [id])
 
 
-//Funcion para actualizar la informacion del cocktail mediante .put
+{//Funcion para actualizar la informacion del cocktail mediante .put
+
+}
    const handleEdit = async (e) => {
       e.preventDefault()
 
@@ -66,7 +76,9 @@ export function Edit() {
       }
    }
 
-   //Función que recoge los datos escritos en el input
+   {//Función que recoge los datos escritos en el input
+      
+   }
    const handleChange = (e) => {
       setCocktail({ ...cocktail, [e.target.name]: e.target.value });
   }

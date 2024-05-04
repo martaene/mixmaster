@@ -8,13 +8,17 @@ export function Home() {
     const navigate = useNavigate()
 
 
-    //Comprueba que las credenciales esten guardadas en localStorage
+    {//Comprueba que las credenciales esten guardadas en localStorage
+        
+    }
     useEffect(() => {
 
         const buscar = localStorage.getItem('login')
         console.log(buscar)
 
-        // Si no estan guardadas redirige a Login
+        {// Si no estan guardadas redirige a Login
+            
+        }
         if (!buscar) {
             navigate('/')
         } else {
@@ -44,7 +48,8 @@ const Welcome = () => {
                     </h2>
                     <p className="welcome__p">Explora nuevas recetas, cerea tus propios cocktails y comparte tu pasión por las buenas bebidas</p>
 
-                    //Redirige a la página de todos los cocktails
+                    {/*Redirige a la página de todos los cocktails
+                    */}
                     <a href="/explorer" className="welcome__a">Ver cocktails</a>
                 </div>
             </div>

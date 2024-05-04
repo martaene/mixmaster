@@ -8,11 +8,15 @@ export function Explorer() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        //Comprueba que las credenciales esten guardadas en localStorage
+        {//Comprueba que las credenciales esten guardadas en localStorage
+            
+        }
         const buscar = localStorage.getItem('login')
         console.log(buscar)
-        
-        // Si no estan guardadas redirige a Login
+
+        {// Si no estan guardadas redirige a Login
+
+        }
         if (!buscar) {
             navigate('/')
         } else {
@@ -35,7 +39,9 @@ const CocktailGrid = () => {
     const { VITE_API } = import.meta.env
 
     useEffect(() => {
-        // Función para cargar los cocktails desde la API de Mongo
+        {/* Función para cargar los cocktails desde la API de Mongo
+            
+        */}
         const fetchCocktails = async () => {
             try {
                 const response = await fetch(VITE_API)

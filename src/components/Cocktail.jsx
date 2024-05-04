@@ -9,13 +9,17 @@ export function Cocktail() {
     const { id } = useParams()
     const navigate = useNavigate()
 
-     //Comprueba que las credenciales esten guardadas en localStorage
+     {//Comprueba que las credenciales esten guardadas en localStorage
+
+     }
     useEffect(() => {
 
         const buscar = localStorage.getItem('login')
         console.log(buscar)
 
-        // Si no estan guardadas redirige a Login
+        {// Si no estan guardadas redirige a Login
+
+        }
         if (!buscar) {
             navigate('/')
         } else {
@@ -23,7 +27,9 @@ export function Cocktail() {
         }
     }, [])
 
-    //LLamada a la API para mostrar el cocktail con ese id
+    {//LLamada a la API para mostrar el cocktail con ese id
+
+    }
 
     useEffect(() => {
         const getCocktail = async () => {
@@ -41,7 +47,9 @@ export function Cocktail() {
         getCocktail()
     }, [id])
 
-    //Función para eliminar un cocktail de la API mediante un .delete
+   { //Función para eliminar un cocktail de la API mediante un .delete
+    
+   }
     const handleDelete = async () => {
 
 

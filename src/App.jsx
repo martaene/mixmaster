@@ -11,7 +11,8 @@ function App() {
 
   return (
     <>
-    //Rutas para poder acceder a cada componente 
+        {//Rutas para poder acceder a cada componente 
+        }
       <BrowserRouter >
       <Routes>
         <Route path="/" element= {<Login />} />

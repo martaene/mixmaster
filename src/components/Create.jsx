@@ -8,13 +8,17 @@ export function Create () {
 
     const navigate = useNavigate()
 
-    //Comprueba que las credenciales esten guardadas en localStorage
+   { //Comprueba que las credenciales esten guardadas en localStorage
+
+   }
     useEffect(() => {
 
         const buscar = localStorage.getItem('login')
         console.log(buscar)
 
-        // Si no estan guardadas redirige a Login
+       { // Si no estan guardadas redirige a Login
+
+       }
         if (!buscar) {
             navigate('/')
         } else {
@@ -40,16 +44,24 @@ const Form = () => {
 
     const { VITE_API } = import.meta.env
 
-    //Función poder crear un nuevo cocktail en la API mediante un .post
+    {//Función poder crear un nuevo cocktail en la API mediante un .post
+
+    }
     const formHandler = async (e) => {
         e.preventDefault()
 
-        //Convertir los ingredients introducidos en un array
+        {//Convertir los ingredients introducidos en un array
+
+        }
         const ingredientsArray = ingredients.split(',').map(ingredient => {
-            // Trim para eliminar espacios en blanco
+            {// Trim para eliminar espacios en blanco
+
+            }
             ingredient = ingredient.trim();
         
-            // Convertir la primera letra a mayúscula y el resto a minúscula
+            {// Convertir la primera letra a mayúscula y el resto a minúscula
+
+            }
             return ingredient.charAt(0).toUpperCase() + ingredient.slice(1).toLowerCase();
         });
         
@@ -77,7 +89,9 @@ const Form = () => {
         }
     }
 
-    //Funciones para recoger los datos recogidos en los input
+    {//Funciones para recoger los datos recogidos en los input
+        
+    }
     const handleNameChange = (e) => {
         setName(e.target.value)
     }
