@@ -65,7 +65,7 @@ export function Cocktail() {
 
         if (response.ok) {
             alert('Cocktail eliminado con éxito')
-            navigate('/explorer')
+            Navigate('/explorer')
         }
 
     }
