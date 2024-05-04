@@ -50,3 +50,9 @@
 .form__submit:hover {
     background-color: rgb(247, 77, 77);
 }
+
+@media(max-width: 770px){
+    .login__container{
+        width: 60%;
+    }
+}
