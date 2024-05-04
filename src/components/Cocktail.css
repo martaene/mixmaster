@@ -193,7 +193,6 @@
   .info__li:hover{
     background-color: rgb(254, 253, 237);
     color: rgb(161, 195, 152);
-    border: .3125rem solid rgb(161, 195, 152);
   }
 
   .info__button.delete{
