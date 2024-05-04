@@ -7,7 +7,7 @@ export function Cocktail() {
 
     const [cocktail, setCocktail] = useState({ ingredients: [] })
     const { id } = useParams()
-    const navigate = useNavigate()
+    const Navigate = useNavigate()
 
      {//Comprueba que las credenciales esten guardadas en localStorage
 
@@ -21,7 +21,7 @@ export function Cocktail() {
 
         }
         if (!buscar) {
-            navigate('/')
+            Navigate('/')
         } else {
 
         }

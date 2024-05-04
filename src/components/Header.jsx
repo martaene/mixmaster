@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './Header.css'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 
 export function Header () {
 
@@ -10,7 +10,7 @@ export function Header () {
         <>
             <header className="header">
                 <div className="header__search">
-                    <a href='/home' className="header__logo">MIX MASTER</a>
+                    <Link to='/home' className="header__logo">MIX MASTER</Link>
                     <Profile />
                 </div>
                 <div className="header__nav">
@@ -68,9 +68,9 @@ const Nav = () => {
         <>
             <nav className="nav">
                 <ul className="nav__ul">
-                    <li className="nav__li"><a href="/explorer" className='nav__a'>Explorer</a></li>
+                    <li className="nav__li"><Link to="/explorer" className='nav__a'>Explorer</Link></li>
 
-                    <li className="nav__li"><a href="/create" className='nav__a'>Create</a></li>
+                    <li className="nav__li"><Link to="/create" className='nav__a'>Create</Link></li>
                 </ul>
             </nav>
         </>
