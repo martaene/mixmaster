@@ -6,8 +6,10 @@ import { useEffect, useState } from 'react'
 export function Edit() {
 
    const { id } = useParams()
-   const [cocktail, setCocktail] = useState({ id, name: '', steps: ''})
-   
+   const [cocktail, setCocktail] = useState([])
+   const [ name , setName ] = useState(cocktail.name)
+    const [ steps , setSteps ] = useState(cocktail.steps)
+
    const navigate = useNavigate()
 
 
@@ -60,7 +62,7 @@ export function Edit() {
           headers: {
               'Content-Type': 'application/json'
           },
-          body: JSON.stringify(cocktail),
+          body: JSON.stringify({cocktail, name, steps}),
           signal: controller.signal
       }
    
@@ -79,9 +81,17 @@ export function Edit() {
    {//Función que recoge los datos escritos en el input
       
    }
-   const handleChange = (e) => {
-      setCocktail({ ...cocktail, [e.target.name]: e.target.value });
+   const handleNameChange = (e) => {
+      setName(e.target.value)
   }
+
+  const handleStepsChange = (e) => {
+      setSteps(e.target.value)
+  }
+
+//   const handleIngredientsChange = (e) => {
+//       setIngredients(e.target.value)
+//   }
 
   console.log(cocktail)
 
@@ -93,9 +103,9 @@ export function Edit() {
 
             <form onSubmit={handleEdit} className='edit__form'>
 
-               <input type="text" name="name" value={cocktail.name} onChange={handleChange} placeholder="Nombre" className='edit__input name' />
+               <input type="text" name="name" value={name} onChange={handleNameChange}  className='edit__input name' />
 
-               <input type="textarea" name="steps" value={cocktail.steps} onChange={handleChange} placeholder="Pasos" className='edit__input steps' />
+               <input type="textarea" name="steps" value={steps} onChange={handleStepsChange}  className='edit__input steps' />
 
                <input type="submit"  className='edit__button save'/>
 
