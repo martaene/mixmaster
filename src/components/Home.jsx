@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './Home.css'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { Header } from './Header.jsx'
 
 export function Home() {
@@ -49,7 +49,7 @@ const Welcome = () => {
 
                     {/*Redirige a la página de todos los cocktails
                     */}
-                    <a href="/explorer" className="welcome__a">Ver cocktails</a>
+                    <Link to="/explorer" className="welcome__a">Ver cocktails</Link>
                 </div>
             </div>
         </>

@@ -5,7 +5,7 @@ import { Header } from './Header.jsx'
 
 export function Explorer() {
 
-    const navigate = useNavigate()
+    const Navigate = useNavigate()
 
     useEffect(() => {
         {//Comprueba que las credenciales esten guardadas en localStorage
@@ -18,7 +18,7 @@ export function Explorer() {
 
         }
         if (!buscar) {
-            navigate('/')
+            Navigate('/')
         } else {
 
         }
