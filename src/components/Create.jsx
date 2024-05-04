@@ -51,7 +51,6 @@ const Form = () => {
         e.preventDefault()
 
         {//Convertir los ingredients introducidos en un array
-
         }
         const ingredientsArray = ingredients.split(',').map(ingredient => {
             {// Trim para eliminar espacios en blanco

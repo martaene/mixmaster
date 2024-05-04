@@ -6,16 +6,13 @@ import { useEffect, useState } from 'react'
 export function Edit() {
 
    const { id } = useParams()
-   const [cocktail, setCocktail] = useState([])
+   const [cocktail, setCocktail] = useState('')
    const [ name , setName ] = useState(cocktail.name)
-    const [ steps , setSteps ] = useState(cocktail.steps)
+   const [ steps , setSteps ] = useState(cocktail.steps)
+   const [ ingredients , setIngredients ] = useState(cocktail.ingredients)
 
    const navigate = useNavigate()
-
-
-
     {//Comprueba que las credenciales esten guardadas en localStorage
-
     }
    useEffect(() => {
       const buscar = localStorage.getItem('login')
@@ -28,7 +25,6 @@ export function Edit() {
          navigate('/')
       }
    }, [navigate])
-
 
 {//LLamada a la API para mostrar el cocktail con ese id
 
@@ -56,13 +52,27 @@ export function Edit() {
    const handleEdit = async (e) => {
       e.preventDefault()
 
+       {//Convertir los ingredients introducidos en un array
+       }
+       const ingredientsArray = ingredients.split(',').map(ingredient => {
+           {// Trim para eliminar espacios en blanco
+
+           }
+           ingredient = ingredient.trim();
+       
+           {// Convertir la primera letra a mayúscula y el resto a minúscula
+
+           }
+           return ingredient.charAt(0).toUpperCase() + ingredient.slice(1).toLowerCase();
+       });
+
       let controller = new AbortController()
       let options = {
           method: 'PUT',
           headers: {
               'Content-Type': 'application/json'
           },
-          body: JSON.stringify({cocktail, name, steps}),
+          body: JSON.stringify({name, steps, ingredients: ingredientsArray, id}),
           signal: controller.signal
       }
    
@@ -89,9 +99,9 @@ export function Edit() {
       setSteps(e.target.value)
   }
 
-//   const handleIngredientsChange = (e) => {
-//       setIngredients(e.target.value)
-//   }
+  const handleIngredientsChange = (e) => {
+      setIngredients(e.target.value)
+  }
 
   console.log(cocktail)
 
@@ -103,10 +113,12 @@ export function Edit() {
 
             <form onSubmit={handleEdit} className='edit__form'>
 
-               <input type="text" name="name" value={name} onChange={handleNameChange}  className='edit__input name' />
+               <input type="text" name="name" value={name} onChange={handleNameChange} placeholder={cocktail.name} className='edit__input name' />
 
-               <input type="textarea" name="steps" value={steps} onChange={handleStepsChange}  className='edit__input steps' />
+               <input type="text"  name="steps" value={steps} onChange={handleStepsChange} placeholder={cocktail.steps} className='edit__input steps' />
 
+               <input type="text"  name="ingredients" value={ingredients} onChange={handleIngredientsChange} placeholder={cocktail.ingredients} className='edit__input ingredients' />
+              
                <input type="submit"  className='edit__button save'/>
 
                <div className='edit__buts'>
