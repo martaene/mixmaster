@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import './Edit.css'
 import { Header } from './Header'
 import { useEffect, useState } from 'react'
@@ -100,7 +100,7 @@ export function Edit() {
                <input type="submit"  className='edit__button save'/>
 
                <div className='edit__buts'>
-                  <a type="button" href={`/cocktail/${id}`} className='edit__button cancel'>Cancelar</a>
+                  <Link type="button" to={`/cocktail/${id}`} className='edit__button cancel'>Cancelar</Link>
                </div>
             </form>
          </div>

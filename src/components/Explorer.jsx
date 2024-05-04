@@ -1,5 +1,5 @@
 import './Explorer.css'
-import { Navigate, useNavigate } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Header } from './Header.jsx'
 
@@ -63,7 +63,7 @@ const CocktailGrid = () => {
         <div className="cocktail">
             {cocktails.map((cocktail, index) => (
                 <div key={index} className="cocktail__item">
-                    <a href={`/cocktail/${cocktail._id}`} className='cocktail__a'>
+                    <Link to={`/cocktail/${cocktail._id}`} className='cocktail__a'>
                         <img src={cocktail.img} alt={cocktail.name} className="cocktail__img" />
                         <div className="cocktail__details">
                             <h3 className="cocktail__h3">{cocktail.name}</h3>
@@ -73,7 +73,7 @@ const CocktailGrid = () => {
                                 ))}
                             </ul>
                         </div>
-                    </a>
+                    </Link>
                 </div>
             ))}
         </div>

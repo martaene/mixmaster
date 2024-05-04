@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Header } from './Header'
-import { Navigate, useNavigate, useParams } from 'react-router-dom'
+import { Link, Navigate, useNavigate, useParams } from 'react-router-dom'
 import './Cocktail.css'
 
 export function Cocktail() {
@@ -90,7 +90,7 @@ export function Cocktail() {
                     </ul>
                     <div className='info__buts'>
                         <button onClick={handleDelete} className='info__button delete'>Eliminar</button>
-                        <a href={`/edit/${cocktail._id}`} className='info__button edit'>Editar</a>
+                        <Link to={`/edit/${cocktail._id}`} className='info__button edit'>Editar</Link>
                     </div>
                 </div>
             </div>
