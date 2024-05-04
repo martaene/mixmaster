@@ -45,7 +45,7 @@ const Welcome = () => {
                     <h2 className='welcome__h2'>
                         BIENVENIDO A MIX MASTER
                     </h2>
-                    <p className="welcome__p">Explora nuevas recetas, cerea tus propios cocktails y comparte tu pasión por las buenas bebidas</p>
+                    <p className="welcome__p">Explora nuevas recetas, crea tus propios cocktails y comparte tu pasión por las buenas bebidas</p>
 
                     {/*Redirige a la página de todos los cocktails
                     */}
