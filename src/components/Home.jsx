@@ -8,8 +8,7 @@ export function Home() {
     const navigate = useNavigate()
 
 
-    {//Comprueba que las credenciales esten guardadas en localStorage
-        
+    {//Comprueba que las credenciales esten guardadas en localStorage     
     }
     useEffect(() => {
 
