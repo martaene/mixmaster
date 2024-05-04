@@ -138,64 +138,97 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-.cocktail {
-  background-color: rgb(254, 253, 237);
-    margin: 1.25rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.25rem;
+
+.edit{
+    margin: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 33px;
 }
 
-.cocktail__item {
-    border: .0625rem solid rgb(161, 195, 152);
-    border-radius: .5rem;
-    overflow: hidden;
-
-    position: relative;
+.edit__img{
+    max-width: 50%; 
+    background-color: green;
 }
 
-.cocktail__img {
+.edit__form{
+    width: 50%;
+    background-color: rgba(161, 195, 152, 0.9);
+    padding: 2rem;
+    border-radius: .625rem;
+    box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.edit__input{
     width: 100%;
-    height: 31.25rem; 
-    object-fit: cover; 
+    padding: 0.8rem;
+    border: .0625rem solid rgb(254, 253, 237);
+    border-radius: .3125rem;
+    font-size: 1rem;
 }
 
-.cocktail__details {
-  width: 100%;
-    padding: 10px;
-    background-color: rgb(198, 235, 197);
+.edit__input.steps{
+    padding-bottom: 100px;   
+}
+
+.edit__buts{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.edit__button.cancel{
+    margin-top: 30px;
+    padding: 13px 15px;
+    background-color: rgb(254, 253, 237);
     display: inline;
-
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
-.cocktail__h3 {
-    margin-top: 0;
-    font-size: 28px;
+    border: 0.5px solid rgb(250, 112, 112);
+    border-radius: 50px;
     color: rgb(250, 112, 112);
 }
-.cocktail__h3:hover{
-  color: rgb(254, 253, 237);
-}
-.cocktail__ul{
-  margin-top: 15px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  gap: 10px;
-}
-.cocktail__li{
-  background-color: rgb(161, 195, 152);
-  padding: 3px 6px;
-  border-radius: 10px;
-  font-size: 13px;
-  color:  rgb(254, 253, 237);
+
+.edit__button.cancel:hover{
+    background-color: rgb(250, 112, 112);
+    color: rgb(254, 253, 237);
 }
 
-.cocktail__li:hover{
-  background-color: rgb(254, 253, 237);
-  color: rgb(161, 195, 152);
+.edit__button.save{
+    margin-top: 30px;
+    padding: 13px 15px;
+    background-color: rgb(254, 253, 237);
+    display: inline;
+    border: 0.5px solid rgb(161, 195, 152);
+    border-radius: 50px;
+    color: rgb(161, 195, 152);
 }
 
+.edit__button.save:hover{
+    background-color: rgb(161, 195, 152);
+    color: rgb(254, 253, 237);
+}
+
+@media(max-width: 700px){
+  .edit{
+    width: 90%;
+      margin-top: 2.5rem;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+  }
+  .edit__img{
+    max-width: 70%;
+  }
+  .edit__form{
+    width: 70%;
+  }
+}

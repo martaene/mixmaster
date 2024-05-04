@@ -15,10 +15,12 @@ export function Login() {
         const { current: userInput } = user
         const { current: passInput } = pass
 
-        //comparar valores (fetch + API Express)
+        //comparar valores de los input con las credenciales para poder acceder
         if ((userInput.value === 'admin' && passInput.value === 'admin') || (userInput.value === 'edu' && passInput.value === 'thebest') || (userInput.value === 'cei' && passInput.value === 'cei')) {
 
+            //Guarda los valores en localStorage para futuras actualizaciones de página
             localStorage.setItem("login", "true")
+            //Redirige a la home
             navigate('/home')
         } else {
             console.log('No puedes entrar :)')

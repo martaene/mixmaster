@@ -3,23 +3,24 @@ import { Navigate, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Header } from './Header.jsx'
 
-export function Explorer () {
+export function Explorer() {
 
     const navigate = useNavigate()
 
     useEffect(() => {
-
+        //Comprueba que las credenciales esten guardadas en localStorage
         const buscar = localStorage.getItem('login')
         console.log(buscar)
-
+        
+        // Si no estan guardadas redirige a Login
         if (!buscar) {
             navigate('/')
         } else {
 
         }
     }, [])
-    
-    return(
+
+    return (
         <>
             <Header />
             <CocktailGrid />
@@ -28,7 +29,7 @@ export function Explorer () {
 }
 
 const CocktailGrid = () => {
-    
+
     const [cocktails, setCocktails] = useState([])
 
     const { VITE_API } = import.meta.env
@@ -48,21 +49,24 @@ const CocktailGrid = () => {
                 console.error('Error al cargar los cocktails desde la API:', error)
             }
         }
-    
+
         fetchCocktails()
     }, [])
 
     return (
         <div className="cocktail">
-            {cocktails.map((cocktail , index)  => (
+            {cocktails.map((cocktail, index) => (
                 <div key={index} className="cocktail__item">
                     <a href={`/cocktail/${cocktail._id}`} className='cocktail__a'>
-                    <img src='' alt={cocktail.name} className="cocktail__img" />
-                    <div className="cocktail__details">
-                        <h3 className="cocktail__h3">{cocktail.name}</h3>
-                        <p className="cocktail__p">{cocktail.steps}</p>
-                        {/* Aquí puedes mostrar más detalles del cocktail si lo necesitas */}
-                    </div>
+                        <img src={cocktail.img} alt={cocktail.name} className="cocktail__img" />
+                        <div className="cocktail__details">
+                            <h3 className="cocktail__h3">{cocktail.name}</h3>
+                            <ul className='cocktail__ul'>
+                                {cocktail.ingredients.map((eachIngr, index) => (
+                                    <li key={index} className='cocktail__li'>{eachIngr}</li>
+                                ))}
+                            </ul>
+                        </div>
                     </a>
                 </div>
             ))}

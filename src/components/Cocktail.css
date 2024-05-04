@@ -136,41 +136,130 @@
     -webkit-font-smoothing: antialiased;
     /* opcional */
     -moz-osx-font-smoothing: grayscale;
+    background-color: rgb(254, 253, 237);
   }
   
-.cocktail-detail {
+.info {
+  width: 60%;
+    margin: 20px auto 0;
+    height: 100vh ;
     display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
     align-items: flex-start;
+    gap: 33px;
   }
   
-  .cocktail-detail__image {
-    flex: 0 0 auto;
-    margin-right: 20px;
+  .info__img {
+    max-width: 60%; 
+    height: 70vh;
+    object-fit: cover;
+    background-color: pink;
   }
   
-  .cocktail-detail__image img {
-    max-width: 200px; /* Ajusta el tamaño máximo de la imagen según sea necesario */
-    height: auto; /* Ajusta automáticamente la altura según el ancho */
+  
+  .info__h2 {
+    color: rgb(250, 112, 112);
+    font-size: 30px;
   }
   
-  .cocktail-detail__info {
-    flex: 1 1 auto;
-  }
-  
-  .cocktail-detail__info h2 {
-    margin-top: 0;
-  }
-  
-  .cocktail-detail__info h3 {
+  .info__h3 {
     margin-top: 20px;
+    color: rgb(161, 195, 152);
+    font-size: 22px;
   }
-  
-  .cocktail-detail__info ul {
+
+  .info__p{
     margin-top: 10px;
-    padding-left: 20px;
+    font-size: 13px;
   }
   
-  .cocktail-detail__info ul li {
-    margin-bottom: 5px;
+  .info__ul {
+    margin-top: 10px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  
+  .info__li {
+    background-color: rgb(161, 195, 152);
+    padding: 3px 6px;
+    border-radius: 10px;
+    font-size: 13px;
+    color:  rgb(254, 253, 237);
+  }
+
+  .info__li:hover{
+    background-color: rgb(254, 253, 237);
+    color: rgb(161, 195, 152);
+    border: .5px solid rgb(161, 195, 152);
+  }
+
+  .info__button.delete{
+
+    padding: 13px 15px;
+    background-color: rgb(254, 253, 237);
+    display: inline;
+    border: 0.5px solid rgb(250, 112, 112);
+    border-radius: 50px;
+    color: rgb(250, 112, 112);
+  }
+
+  .info__button.delete:hover{
+    background-color: rgb(250, 112, 112);
+    color: rgb(254, 253, 237);
+  }
+
+  .info__buts{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+  }
+  .info__button.edit{
+
+    padding: 13px 15px;
+    background-color: rgb(254, 253, 237);
+    display: inline;
+    border: 0.5px solid rgb(161, 195, 152);
+    border-radius: 50px;
+    color: rgb(161, 195, 152);
+  }
+
+  .info__button.edit:hover{
+    background-color: rgb(161, 195, 152);
+    color: rgb(254, 253, 237);
+  }
+
+  @media ( max-width: 1000px){
+    .info{
+      width: 80%;
+    }
+  }
+
+  @media ( max-width: 860px){
+    .info{
+
+      margin-top: 5rem;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .info__img{
+      max-width: 80%;
+    }
+    .info__detail{
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .info__p{
+      width: 50%;
+      text-align: center;
+    }
   }
   

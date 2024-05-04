@@ -3,8 +3,9 @@
     margin: 0;
     background-color: rgb(254, 253, 237);
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    flex-flow: column nowrap;
+    justify-content: center; 
+    align-items: center; 
 }
 
 .login__container {
@@ -12,7 +13,7 @@
     background-color: rgba(161, 195, 152, 0.9);
     padding: 2rem;
     border-radius: .625rem;
-    box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.1); /* Sombra suave */
+    box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.1); 
 }
 
 .login__h2 {
@@ -43,7 +44,7 @@
     border-radius: .3125rem;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Transición suave */
+    transition: background-color 0.3s ease; 
 }
 
 .form__submit:hover {

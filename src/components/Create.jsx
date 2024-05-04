@@ -8,11 +8,13 @@ export function Create () {
 
     const navigate = useNavigate()
 
+    //Comprueba que las credenciales esten guardadas en localStorage
     useEffect(() => {
 
         const buscar = localStorage.getItem('login')
         console.log(buscar)
 
+        // Si no estan guardadas redirige a Login
         if (!buscar) {
             navigate('/')
         } else {
@@ -38,9 +40,11 @@ const Form = () => {
 
     const { VITE_API } = import.meta.env
 
+    //Función poder crear un nuevo cocktail en la API mediante un .post
     const formHandler = async (e) => {
         e.preventDefault()
 
+        //Convertir los ingredients introducidos en un array
         const ingredientsArray = ingredients.split(',').map(ingredient => {
             // Trim para eliminar espacios en blanco
             ingredient = ingredient.trim();
@@ -73,6 +77,7 @@ const Form = () => {
         }
     }
 
+    //Funciones para recoger los datos recogidos en los input
     const handleNameChange = (e) => {
         setName(e.target.value)
     }
@@ -87,12 +92,18 @@ const Form = () => {
 
     return(
         <>
-        <form action="#" method='get' onSubmit={formHandler}>
-                <input type="text" value={name} onChange={handleNameChange} placeholder='Name'/>
-                <input type="textarea" value={steps} onChange={handleStepsChange} placeholder='Steps' />
-                <input type="text" value={ingredients} onChange={handleIngredientsChange} placeholder='Ingredientes' />
-                <input type="submit" placeholder='Enviar'/>
+        <div className="create">
+            <div className="create__text">
+            <h2 className="create__h2">¡Crea un nuevo cocktail!</h2>
+            <p className="create__p">Ingresa el nombre, los pasos y los ingredientes del cóctel que deseas agregar a nuestra colección. ¡Deja volar tu imaginación y comparte tu receta con la comunidad de MixMaster!</p>
+            </div>
+        <form action="#" method='get' onSubmit={formHandler} className='create__form'>
+                <input type="text" value={name} onChange={handleNameChange} placeholder='Name' className='create__input name'/>
+                <input type="text" value={ingredients} onChange={handleIngredientsChange} placeholder='Ingredientes' className='create__input ingredients'/>
+                <input type="textarea" value={steps} onChange={handleStepsChange} placeholder='Steps' className='create__input steps'/>
+                <input type="submit" placeholder='Guardar' className='create__submit'/>
             </form>
+            </div>
         </>
     )
 }

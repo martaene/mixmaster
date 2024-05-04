@@ -137,3 +137,101 @@
     /* opcional */
     -moz-osx-font-smoothing: grayscale;
   }
+
+  .create{
+    width: 80%;
+    height: 80vh;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.875rem;
+  }
+
+  .create__text{
+    width: 50%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.875rem;
+  }
+
+  .create__h2{
+    width: 100%;
+    font-size: 3.125rem;
+    color: rgb(250, 112, 112);
+  }
+
+  .create__p{
+    width: 90%;
+  }
+
+  .create__form{
+    width: 50%;
+    background-color: rgba(161, 195, 152, 0.9);
+    padding: 2rem;
+    border-radius: .625rem;
+    box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .create__input{
+    width: 100%;
+    padding: 0.8rem;
+    border: .0625rem solid rgb(254, 253, 237);
+    border-radius: .3125rem;
+    font-size: 1rem;
+  }
+
+  .create__input::placeholder{
+    color: rgb(198, 235, 197);
+  }
+
+  .create__input.steps{
+    padding-bottom: 100px;
+  }
+
+  .create__submit{
+    padding: 0.8rem 2rem;
+    background-color: rgb(250, 112, 112);
+    color: #fff;
+    border: none;
+    border-radius: .3125rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  @media (max-width: 630px){
+    .create{
+      width: 90%;
+      margin-top: 2.5rem;
+      flex-flow: column;
+      justify-content: flex-start;
+    }
+    .create__text{
+      width: 70%;
+      justify-content: center;
+    }
+    .create__h2{
+      text-align: center;
+    }
+    .create__p{ 
+      text-align: center;
+    }
+    .create__form{
+      width: 80%;
+    }
+  }
+
+
+
+
